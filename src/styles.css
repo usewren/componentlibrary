@@ -1,0 +1,444 @@
+/* Wren Component Library Styles */
+
+:root {
+  --wren-bg: #ffffff;
+  --wren-bg-subtle: #f8fafc;
+  --wren-border: #e2e8f0;
+  --wren-text: #0f172a;
+  --wren-text-muted: #64748b;
+  --wren-primary: #3b82f6;
+  --wren-primary-hover: #2563eb;
+  --wren-success: #10b981;
+  --wren-warning: #f59e0b;
+  --wren-danger: #ef4444;
+  --wren-radius: 6px;
+  --wren-font: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --wren-mono: ui-monospace, "Fira Code", monospace;
+}
+
+/* ─── Button ─────────────────────────────────────────────── */
+
+.wren-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-family: var(--wren-font);
+  font-weight: 500;
+  border-radius: var(--wren-radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.wren-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.wren-btn--sm {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.625rem;
+}
+
+.wren-btn--md {
+  font-size: 0.875rem;
+  padding: 0.5rem 0.875rem;
+}
+
+.wren-btn--lg {
+  font-size: 1rem;
+  padding: 0.625rem 1.125rem;
+}
+
+/* Variants */
+.wren-btn--primary {
+  background-color: var(--wren-primary);
+  color: #ffffff;
+  border-color: var(--wren-primary);
+}
+
+.wren-btn--primary:hover:not(:disabled) {
+  background-color: var(--wren-primary-hover);
+  border-color: var(--wren-primary-hover);
+}
+
+.wren-btn--secondary {
+  background-color: var(--wren-bg);
+  color: var(--wren-text);
+  border-color: var(--wren-border);
+}
+
+.wren-btn--secondary:hover:not(:disabled) {
+  background-color: var(--wren-bg-subtle);
+}
+
+.wren-btn--danger {
+  background-color: var(--wren-danger);
+  color: #ffffff;
+  border-color: var(--wren-danger);
+}
+
+.wren-btn--danger:hover:not(:disabled) {
+  background-color: #dc2626;
+  border-color: #dc2626;
+}
+
+.wren-btn--ghost {
+  background-color: transparent;
+  color: var(--wren-text);
+  border-color: transparent;
+}
+
+.wren-btn--ghost:hover:not(:disabled) {
+  background-color: var(--wren-bg-subtle);
+}
+
+/* ─── Badge ──────────────────────────────────────────────── */
+
+.wren-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--wren-font);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+}
+
+.wren-badge--default {
+  background-color: var(--wren-bg-subtle);
+  color: var(--wren-text-muted);
+  border-color: var(--wren-border);
+}
+
+.wren-badge--green {
+  background-color: #d1fae5;
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+
+.wren-badge--amber {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-color: #fde68a;
+}
+
+.wren-badge--red {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+.wren-badge--blue {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border-color: #bfdbfe;
+}
+
+/* ─── Card ───────────────────────────────────────────────── */
+
+.wren-card {
+  background-color: var(--wren-bg);
+  border: 1px solid var(--wren-border);
+  border-radius: var(--wren-radius);
+  overflow: hidden;
+}
+
+.wren-card__header {
+  font-family: var(--wren-font);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--wren-text);
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--wren-border);
+  background-color: var(--wren-bg-subtle);
+}
+
+.wren-card__body {
+  padding: 1.25rem;
+}
+
+/* ─── Table ──────────────────────────────────────────────── */
+
+.wren-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--wren-font);
+  font-size: 0.875rem;
+  color: var(--wren-text);
+  background-color: var(--wren-bg);
+  border: 1px solid var(--wren-border);
+  border-radius: var(--wren-radius);
+  overflow: hidden;
+}
+
+.wren-table thead {
+  background-color: var(--wren-bg-subtle);
+}
+
+.wren-table th {
+  padding: 0.625rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--wren-text-muted);
+  border-bottom: 1px solid var(--wren-border);
+}
+
+.wren-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--wren-border);
+  color: var(--wren-text);
+}
+
+.wren-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.wren-table tbody tr:hover {
+  background-color: var(--wren-bg-subtle);
+}
+
+/* ─── Tabs ───────────────────────────────────────────────── */
+
+.wren-tabs {
+  display: flex;
+  gap: 0.125rem;
+  border-bottom: 1px solid var(--wren-border);
+  padding-bottom: 0;
+}
+
+.wren-tab {
+  font-family: var(--wren-font);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--wren-text-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.625rem 1rem;
+  cursor: pointer;
+  margin-bottom: -1px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.wren-tab:hover {
+  color: var(--wren-text);
+}
+
+.wren-tab--active {
+  color: var(--wren-primary);
+  border-bottom-color: var(--wren-primary);
+}
+
+/* ─── Input ──────────────────────────────────────────────── */
+
+.wren-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.wren-input-label {
+  font-family: var(--wren-font);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--wren-text);
+}
+
+.wren-input {
+  font-family: var(--wren-font);
+  font-size: 0.875rem;
+  color: var(--wren-text);
+  background-color: var(--wren-bg);
+  border: 1px solid var(--wren-border);
+  border-radius: var(--wren-radius);
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.wren-input:focus {
+  border-color: var(--wren-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.wren-input--error {
+  border-color: var(--wren-danger);
+}
+
+.wren-input--error:focus {
+  border-color: var(--wren-danger);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+.wren-input-error {
+  font-family: var(--wren-font);
+  font-size: 0.75rem;
+  color: var(--wren-danger);
+}
+
+/* ─── Spinner ────────────────────────────────────────────── */
+
+@keyframes wren-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.wren-spinner {
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  animation: wren-spin 0.6s linear infinite;
+  flex-shrink: 0;
+}
+
+.wren-spinner--sm {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.wren-spinner--md {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.wren-spinner--lg {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* ─── Empty State ────────────────────────────────────────── */
+
+.wren-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--wren-text-muted);
+  font-family: var(--wren-font);
+}
+
+.wren-empty-state__title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--wren-text);
+  margin: 0;
+}
+
+.wren-empty-state__description {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* ─── JSON Viewer ────────────────────────────────────────── */
+
+.wren-json-viewer {
+  font-family: var(--wren-mono);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--wren-text);
+  background-color: var(--wren-bg-subtle);
+  border: 1px solid var(--wren-border);
+  border-radius: var(--wren-radius);
+  padding: 1rem;
+  overflow: auto;
+  margin: 0;
+  white-space: pre;
+}
+
+/* ─── Diff Viewer ────────────────────────────────────────── */
+
+.wren-diff-viewer {
+  font-family: var(--wren-mono);
+  font-size: 0.8125rem;
+  border: 1px solid var(--wren-border);
+  border-radius: var(--wren-radius);
+  overflow: hidden;
+  background-color: var(--wren-bg);
+}
+
+.wren-diff-viewer__empty {
+  padding: 1rem 1.25rem;
+  color: var(--wren-text-muted);
+  font-family: var(--wren-font);
+  font-size: 0.875rem;
+}
+
+.wren-diff-entry {
+  display: grid;
+  grid-template-columns: 2rem auto 1fr 1fr;
+  align-items: baseline;
+  gap: 0.5rem 0.75rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--wren-border);
+}
+
+.wren-diff-entry:last-child {
+  border-bottom: none;
+}
+
+.wren-diff-entry--add {
+  background-color: #f0fdf4;
+}
+
+.wren-diff-entry--remove {
+  background-color: #fef2f2;
+}
+
+.wren-diff-entry--replace {
+  background-color: #eff6ff;
+}
+
+.wren-diff-entry__op {
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.wren-diff-entry--add .wren-diff-entry__op {
+  color: var(--wren-success);
+}
+
+.wren-diff-entry--remove .wren-diff-entry__op {
+  color: var(--wren-danger);
+}
+
+.wren-diff-entry--replace .wren-diff-entry__op {
+  color: var(--wren-primary);
+}
+
+.wren-diff-entry__path {
+  color: var(--wren-text-muted);
+  font-size: 0.75rem;
+  word-break: break-all;
+}
+
+.wren-diff-entry__old {
+  color: var(--wren-danger);
+  text-decoration: line-through;
+  opacity: 0.8;
+  word-break: break-all;
+}
+
+.wren-diff-entry__new {
+  color: #065f46;
+  word-break: break-all;
+}
